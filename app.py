@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'flask app on google app engine 2020'
+    return 'flask app on heroku'
 
 
 @app.errorhandler(500)
@@ -24,4 +24,4 @@ def server_error(e):
 if __name__ == '__main__':
     # This is used when running locally. Gunicorn is used to run the
     # application on Google App Engine. See entrypoint in app.yaml.
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0')
